@@ -1,6 +1,8 @@
 # Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)
+- [Introduction to Remix, Pros and Cons](https://medium.com/globant/introduction-to-remix-js-22b7b4755126)
+- [Fullstack data flow](https://remix.run/docs/en/main/discussion/data-flow)
 
 ## Development
 
