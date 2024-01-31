@@ -1,19 +1,17 @@
 import type { SSTConfig } from "sst";
-import { RemixSite } from "sst/constructs";
+import { IAM } from "~/stacks/IAM";
+import { RemixJs } from "~/stacks/RemixJs";
 
 export default {
   config(_input) {
     return {
+      profile: "personal",
       name: "remix-js-sst-aws",
       region: "us-east-1",
     };
   },
   stacks(app) {
-    app.stack(function Site({ stack }) {
-      const site = new RemixSite(stack, "site");
-      stack.addOutputs({
-        url: site.url,
-      });
-    });
+    app.stack(RemixJs);
+    app.stack(IAM);
   },
 } satisfies SSTConfig;
